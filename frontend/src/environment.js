@@ -1,8 +1,8 @@
-// let IS_PROD = true;
-// const server = IS_PROD ?
-//     "https://clearconnect-videocall.onrender.com" :
+let IS_PROD = true;
+const server = IS_PROD ?
+    "https://clearconnet-backend.onrender.com" :
 
-//     "http://localhost:8000"
+    "http://localhost:8000"
 
 
-// export default server;
+export default server;
