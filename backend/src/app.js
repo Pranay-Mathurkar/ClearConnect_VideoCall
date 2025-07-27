@@ -7,7 +7,7 @@ import mongoose from "mongoose";
 import { connectToSocket } from "./controllers/socketManager.js";
 
 import cors from "cors";
-import userRoutes from "../src/routes/user.routes.js";
+import userRoutes from "./routes/users.routes.js";
 
 const app = express();
 const server = createServer(app);
@@ -25,7 +25,7 @@ const start = async () => {
     app.set("mongo_user")
     const connectionDb = await mongoose.connect("mongodb+srv://aura:test1234@cluster0.alskgd8.mongodb.net/")
 
-    console.log(`MONGO Connected DB HOst:`)
+    console.log(`MONGO Connected DB HOst: ${connectionDb.connection.host}`)
     server.listen(app.get("port"), () => {
         console.log("LISTENIN ON PORT 8000")
     });
